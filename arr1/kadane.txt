@@ -1,0 +1,16 @@
+var maxSubArray = function(nums) {
+    
+    if(nums.length==1) return nums[0]
+    let sum=0;
+    
+    let maxi=-2147483648;
+    
+    for (i = 0; i < nums.length; i++) {
+        sum +=nums[i];
+        maxi=Math.max(sum,maxi)
+        //console.log(maxi)
+        if(sum<0) sum=0
+    }
+    
+    return maxi
+};

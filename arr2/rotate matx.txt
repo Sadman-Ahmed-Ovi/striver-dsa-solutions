@@ -1,0 +1,14 @@
+var rotate = function(matrix) {
+     let col=[]
+     
+     for(i=0;i<matrix[0].length;i++){
+         col[i]=[]
+         for(j=0;j<matrix[0].length;j++){
+             col[i].push(matrix[j][i])
+         }
+     }
+    
+    for(i=0;i<matrix.length;i++){
+        matrix.splice(i,1,col[i].reverse())
+    }
+};
